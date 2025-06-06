@@ -14,7 +14,7 @@ const TopBar = () => {
   };
 
   return (
-    <div className="bg-gray-300 h-[5vh] flex justify-between items-center">
+    <div className="h-[5vh] flex justify-between items-center border-b shadow-sm">
       <div
         className="flex flex-row items-center gap-2 ml-2"
         onClick={handleClickLogo}
