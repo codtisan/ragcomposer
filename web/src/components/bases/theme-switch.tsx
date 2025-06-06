@@ -7,8 +7,8 @@ export const ThemeSwitch = () => {
   const { theme, setTheme } = useTheme();
   return (
     <Button
-      size="icon"
-      className="rounded-4xl"
+      size="sm"
+      className="rounded-3xl"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {theme === "light" ? <Sun /> : <Moon />}

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/app/globals.css";
 import { ThemeProvider } from "next-themes";
+import TopBar from "../../components/bases/top-bar";
+import { AppSidebar } from "@/components/bases/app-sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +32,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
-          <div>sad</div>
+          <TopBar />
+          <AppSidebar />
           {children}
         </ThemeProvider>
       </body>
