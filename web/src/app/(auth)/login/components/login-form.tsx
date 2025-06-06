@@ -16,8 +16,11 @@ import { z } from "zod";
 import { ColourfulText } from "@/components/ui/colourful-text";
 import Image from "next/image";
 import { formSchema } from "@/configs/form-validation";
+import { UseLogin } from "@/hooks/use-login";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -29,7 +32,9 @@ const LoginForm = () => {
   const handleLoginSubmit = async (
     loginOptions: z.infer<typeof formSchema>,
   ) => {
-    console.log(loginOptions);
+    const response = await UseLogin(loginOptions);
+    console.log(response);
+    router.push("/");
   };
 
   return (
@@ -42,8 +47,14 @@ const LoginForm = () => {
           >
             <div className="flex flex-col justify-center items-center gap-8">
               <div className="flex flex-row items-center">
-                <Image src={Logo} alt="System Logo" width={100} height={100} />
-                <h1 className="text-3xl">
+                <Image
+                  src={Logo}
+                  alt="System Logo"
+                  width={100}
+                  height={100}
+                  priority={true}
+                />
+                <h1 className="text-3xl font-bold">
                   <ColourfulText text="RAGComposer" />
                 </h1>
               </div>
