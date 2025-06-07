@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { KnowledgeBaseModel } from "@/models/knowledge-base";
+import { useParams, useRouter } from "next/navigation";
 import { Dispatch, SetStateAction } from "react";
 
 type KnowledgeBaseItemProps = {
@@ -14,19 +15,20 @@ type KnowledgeBaseItemProps = {
 
 const KnowledgeBaseItem = ({
   item,
-  selectedKnowledgeBase,
   setSelectedKnowledgeBase,
 }: KnowledgeBaseItemProps) => {
+  const router = useRouter();
+  const { id } = useParams();
+
   return (
     <div
       className={
         (cn("h-[20%] hover:bg-gray-200 flex items-center"),
-        selectedKnowledgeBase === item
-          ? "bg-gray-200 dark:bg-white dark:text-black"
-          : "")
+        id === item._id ? "bg-gray-200" : "")
       }
       onClick={() => {
         setSelectedKnowledgeBase(item);
+        router.push("/graph/" + item._id);
       }}
     >
       <div className="flex flex-col gap-4 ml-6">
