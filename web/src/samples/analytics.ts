@@ -102,14 +102,6 @@ export const UserFeedbackPieChartOptionSample = {
   tooltip: {
     trigger: "item",
   },
-  title: {
-    text: "User feedback",
-    left: "left",
-    textStyle: {
-      fontSize: 18,
-      fontWeight: "bold",
-    },
-  },
   legend: {
     top: "5%",
     left: "center",
@@ -148,14 +140,6 @@ export const UserFeedbackPieChartOptionSample = {
 export const UserSentimentPieChartOptionSample = {
   tooltip: {
     trigger: "item",
-  },
-  title: {
-    text: "User Sentiment",
-    left: "left",
-    textStyle: {
-      fontSize: 18,
-      fontWeight: "bold",
-    },
   },
   legend: {
     top: "5%",

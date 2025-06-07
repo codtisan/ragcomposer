@@ -20,7 +20,7 @@ export function ChartDataDownloadMenu() {
           <DropdownMenuItem>csv</DropdownMenuItem>
           <DropdownMenuItem>json</DropdownMenuItem>
           <DropdownMenuItem>excel</DropdownMenuItem>
-          <DropdownMenuItem>HTML</DropdownMenuItem>
+          <DropdownMenuItem>html</DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>

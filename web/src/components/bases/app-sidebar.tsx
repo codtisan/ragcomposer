@@ -8,6 +8,7 @@ import {
   Cpu,
   DatabaseBackup,
   File,
+  Joystick,
   Key,
   LayoutDashboard,
   LucideProps,
@@ -63,6 +64,11 @@ const firstPageItemList: PageItem[] = [
     title: "Chatbot",
     url: "/chatbot",
     icon: Bot,
+  },
+  {
+    title: "Playground",
+    url: "/playground",
+    icon: Joystick,
   },
   {
     title: "Agent",
