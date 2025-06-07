@@ -24,7 +24,7 @@ const KnowledgeBaseItem = ({
     <div
       className={
         (cn("h-[20%] hover:bg-gray-200 flex items-center"),
-        id === item._id ? "bg-gray-200" : "")
+        id === item._id ? "bg-gray-200 dark:bg-white dark:text-black" : "")
       }
       onClick={() => {
         setSelectedKnowledgeBase(item);
