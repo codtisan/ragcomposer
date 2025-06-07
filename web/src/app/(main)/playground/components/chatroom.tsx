@@ -7,7 +7,7 @@ export default function Chatroom() {
       <div className="w-full h-full overflow-y-auto">
         <ChatroomMessageList />
       </div>
-      <div className="flex flex-row w-full gap-6 items-center mb-8">
+      <div className="flex flex-row w-full gap-3 items-center mb-8">
         <ChatroomInput />
       </div>
     </div>
