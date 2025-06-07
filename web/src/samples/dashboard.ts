@@ -191,7 +191,16 @@ export const ModelUsageBarChartOptionSample = {
   },
   xAxis: {
     type: "category",
-    data: ["Grok", "ChatGPT", "Claude", "Llama", "Mistral"],
+    data: [
+      "Grok",
+      "ChatGPT",
+      "Claude",
+      "Llama",
+      "Mistral",
+      "Qwen",
+      "Deepseek",
+      "Gemini",
+    ],
     axisTick: {
       alignWithLabel: true,
     },
@@ -207,10 +216,13 @@ export const ModelUsageBarChartOptionSample = {
     {
       name: "Tokens",
       type: "bar",
-      barWidth: "15%",
+      barWidth: "30%",
       data: [
         { value: 120, itemStyle: { color: "#5470C6" } },
         { value: 200, itemStyle: { color: "#91CC75" } },
+        { value: 150, itemStyle: { color: "#FAC858" } },
+        { value: 80, itemStyle: { color: "#EE6666" } },
+        { value: 100, itemStyle: { color: "#73C0DE" } },
         { value: 150, itemStyle: { color: "#FAC858" } },
         { value: 80, itemStyle: { color: "#EE6666" } },
         { value: 100, itemStyle: { color: "#73C0DE" } },

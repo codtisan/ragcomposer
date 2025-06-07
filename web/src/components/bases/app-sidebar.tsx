@@ -31,7 +31,14 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { ForwardRefExoticComponent, RefAttributes, useState } from "react";
+import {
+  Dispatch,
+  ForwardRefExoticComponent,
+  RefAttributes,
+  SetStateAction,
+  useState,
+} from "react";
+import { cn } from "@/lib/utils";
 
 export type PageItem = {
   title: string;
@@ -147,11 +154,22 @@ const secondPageItemList: PageItem[] = [
   },
 ];
 
-const MenuItemList = (item: PageItem) => {
+const MenuItemList = (
+  item: PageItem,
+  selectedItem: string,
+  setSelectedItem: Dispatch<SetStateAction<string>>,
+) => {
   return (
     <Tooltip key={item.title}>
       <TooltipTrigger asChild>
-        <Button className="hover:bg-gray-100" variant="link">
+        <Button
+          className={cn(
+            "hover:bg-gray-200",
+            selectedItem === item.title ? "bg-gray-200" : "",
+          )}
+          variant="link"
+          onClick={() => setSelectedItem(item.title)}
+        >
           <Link href={item.url}>
             <item.icon />
           </Link>
@@ -166,22 +184,23 @@ const MenuItemList = (item: PageItem) => {
 
 export const AppSidebar = () => {
   const [page, setPage] = useState<"first" | "second">("first");
+  const [selectedItem, setSelectedItem] = useState<string>("");
 
   return (
     <div className="w-[3rem] flex flex-col items-center border-r shadow-sm justify-between">
       <div className="flex flex-col items-center gap-2 mt-4">
         {page === "first"
           ? firstPageItemList.map((item: PageItem) => {
-              return MenuItemList(item);
+              return MenuItemList(item, selectedItem, setSelectedItem);
             })
           : secondPageItemList.map((item: PageItem) => {
-              return MenuItemList(item);
+              return MenuItemList(item, selectedItem, setSelectedItem);
             })}
       </div>
       <Tooltip key="Next">
         <TooltipTrigger asChild>
           <Button
-            className="hover:bg-gray-100 mb-4"
+            className="hover:bg-gray-200 mb-4"
             variant="link"
             onClick={() => setPage(page === "first" ? "second" : "first")}
           >
