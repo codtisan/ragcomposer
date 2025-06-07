@@ -17,8 +17,10 @@ export function ChartDataDownloadMenu() {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-full" align="center">
         <DropdownMenuGroup>
-          <DropdownMenuItem>CSV</DropdownMenuItem>
-          <DropdownMenuItem>JSON</DropdownMenuItem>
+          <DropdownMenuItem>csv</DropdownMenuItem>
+          <DropdownMenuItem>json</DropdownMenuItem>
+          <DropdownMenuItem>excel</DropdownMenuItem>
+          <DropdownMenuItem>HTML</DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
