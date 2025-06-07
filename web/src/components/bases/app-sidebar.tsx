@@ -168,7 +168,7 @@ export const AppSidebar = () => {
   const [page, setPage] = useState<"first" | "second">("first");
 
   return (
-    <div className="w-[3rem] h-[95vh] flex flex-col items-center border-r shadow-sm justify-between">
+    <div className="w-[3rem] flex flex-col items-center border-r shadow-sm justify-between">
       <div className="flex flex-col items-center gap-2 mt-4">
         {page === "first"
           ? firstPageItemList.map((item: PageItem) => {

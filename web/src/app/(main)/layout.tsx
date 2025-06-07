@@ -33,8 +33,10 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
           <TopBar />
-          <AppSidebar />
-          {children}
+          <div className="flex flex-row h-[95vh] w-[100vw]">
+            <AppSidebar />
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
