@@ -33,6 +33,7 @@
     "react-hook-form": "^7.57.0",
     "sonner": "^2.0.5",
     "tailwind-merge": "^3.3.0",
+    "vis-network": "^9.1.10",
     "zod": "^3.25.55"
   },
   "devDependencies": {

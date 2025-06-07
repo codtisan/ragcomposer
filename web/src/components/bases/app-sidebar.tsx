@@ -95,7 +95,7 @@ const firstPageItemList: PageItem[] = [
     icon: File,
   },
   {
-    title: "Graph",
+    title: "Knowledge Graph",
     url: "/graph",
     icon: Network,
   },
@@ -187,7 +187,7 @@ export const AppSidebar = () => {
   const [selectedItem, setSelectedItem] = useState<string>("");
 
   return (
-    <div className="w-[3rem] flex flex-col items-center border-r shadow-sm justify-between">
+    <div className="w-[3rem] flex flex-col items-center border-r shadow-sm justify-between bg-[#F3F4F9] dark:bg-[#1F2A44]">
       <div className="flex flex-col items-center gap-2 mt-4">
         {page === "first"
           ? firstPageItemList.map((item: PageItem) => {
