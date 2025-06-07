@@ -21,7 +21,9 @@ export default function ChatroomMessageList() {
               key={chatMessage._id}
               variant={chatMessage.role === "user" ? "sent" : "received"}
             >
-              <ChatBubbleAvatar src="/RAGComposer.png" />
+              {chatMessage.role === "assistant" && (
+                <ChatBubbleAvatar src="/RAGComposer.png" />
+              )}
               <ChatBubbleMessage
                 variant={chatMessage.role === "user" ? "sent" : "received"}
               >

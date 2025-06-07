@@ -24,7 +24,7 @@ export const chatMessagesSample: ChatMessageModel[] = [
     _id: "msg_004",
     role: "assistant",
     message_content:
-      '# Simple Markdown Example \nHere is a bullet point list: \n- First item \n- Second item \n- Third item And here is a code block: \n\n```javascript const greet = () => { console.log("Hello, Markdown!"); }; greet();```',
+      '# Simple Markdown Example \nHere is a bullet point list: \n- First item \n- Second item \n- Third item And here is a code block: \n\n```javascript \nconst greet = () => { \nconsole.log("Hello, Markdown!"); \n}; \ngreet();\n```',
     created_at: "2025-06-07T10:18:00Z",
   },
   {
