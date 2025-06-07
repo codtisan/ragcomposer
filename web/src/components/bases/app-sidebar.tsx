@@ -181,7 +181,7 @@ export const AppSidebar = () => {
       <Tooltip key="Next">
         <TooltipTrigger asChild>
           <Button
-            className="hover:bg-sky-100 mb-4"
+            className="hover:bg-gray-100 mb-4"
             variant="link"
             onClick={() => setPage(page === "first" ? "second" : "first")}
           >
