@@ -11,7 +11,7 @@ import { ChartDataDownloadMenu } from "../dashboard/components/chart-download-me
 import AverageLatencyCard from "./components/average-latency-card";
 import TotalCostCard from "./components/total-cost-card";
 
-export default function Home() {
+export default function Analytics() {
   return (
     <div className="size-full flex items-center justify-center">
       <div className="w-[98%] h-[96%] gap-4 flex flex-col">
