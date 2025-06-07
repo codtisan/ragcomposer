@@ -1,8 +1,8 @@
 "use client";
 
 import { Search } from "lucide-react";
-import { Input } from "../../../../components/ui/input";
 import useKnowledgeBaseSearchStore from "@/store/use-knowledge-base-search-store";
+import { Input } from "@/components/ui/input";
 
 const SearchBar = () => {
   const { setSearchInput } = useKnowledgeBaseSearchStore();

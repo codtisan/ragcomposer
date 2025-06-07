@@ -25,7 +25,9 @@ const KnowledgeBaseItem = ({
           ? "bg-gray-200 dark:bg-white dark:text-black"
           : "")
       }
-      onClick={() => setSelectedKnowledgeBase(item)}
+      onClick={() => {
+        setSelectedKnowledgeBase(item);
+      }}
     >
       <div className="flex flex-col gap-4 ml-6">
         <span>{item.name}</span>
