@@ -1,6 +1,6 @@
 "use client";
 import LatencyAreaChart from "./components/latency-chart";
-import ThroughputAreaChart from "./components/throughput-chart";
+import ThroughputAreaChart from "./components/total-request-chart";
 import ModelUsageAreaChart from "./components/model-usage-chart";
 import TotalCostAreaChart from "./components/total-cost-chart";
 import { DatePickerWithRange } from "@/components/bases/datepicker";

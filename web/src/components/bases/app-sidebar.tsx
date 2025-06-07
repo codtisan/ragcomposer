@@ -164,8 +164,8 @@ const MenuItemList = (
       <TooltipTrigger asChild>
         <Button
           className={cn(
-            "hover:bg-gray-200",
-            selectedItem === item.title ? "bg-gray-200" : "",
+            "hover:bg-gray-300 hover:dark:bg-black",
+            selectedItem === item.title ? "bg-gray-300 dark:bg-black" : "",
           )}
           variant="link"
           onClick={() => setSelectedItem(item.title)}

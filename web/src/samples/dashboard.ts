@@ -104,7 +104,7 @@ export const RequestRateAreaChartOptionSample = () => {
     },
     title: {
       left: "center",
-      text: "Request Rate",
+      text: "Total Request",
     },
     toolbox: {
       feature: {

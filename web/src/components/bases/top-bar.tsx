@@ -31,10 +31,10 @@ const TopBar = () => {
         </h1>
       </div>
       <div className="mr-2 flex flex-row items-center gap-3">
+        <ThemeSwitch />
         <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
         </Avatar>
-        <ThemeSwitch />
       </div>
     </div>
   );
