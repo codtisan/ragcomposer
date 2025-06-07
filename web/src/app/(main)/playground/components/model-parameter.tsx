@@ -47,7 +47,7 @@ export default function ParameterPlane() {
         </DropdownMenu>
       </div>
       <Label className="font-bold text-base">Maximum of GPUs</Label>
-      <Input type="number" min="0" max="16" />
+      <Input type="number" min="0" max="64" />
       <div className="flex flex-row justify-between">
         <Label className="font-bold text-base">Temperature</Label>
         <Label className="font-bold text-base">{temperature}</Label>
