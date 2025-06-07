@@ -60,17 +60,17 @@ export const LatencyAreaChartOptionSample = () => {
         symbol: "none",
         sampling: "lttb",
         itemStyle: {
-          color: "rgb(0, 100, 0)",
+          color: "#5CDD8C",
         },
         areaStyle: {
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
             {
               offset: 0,
-              color: "rgb(0, 80, 0)",
+              color: "#365B49",
             },
             {
               offset: 1,
-              color: "rgb(200, 255, 200)",
+              color: "#5CDD8C",
             },
           ]),
         },
@@ -142,17 +142,17 @@ export const RequestRateAreaChartOptionSample = () => {
         symbol: "none",
         sampling: "lttb",
         itemStyle: {
-          color: "rgb(0, 100, 0)",
+          color: "#5CDD8C",
         },
         areaStyle: {
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
             {
               offset: 0,
-              color: "rgb(0, 80, 0)",
+              color: "#365B49",
             },
             {
               offset: 1,
-              color: "rgb(200, 255, 200)",
+              color: "#5CDD8C",
             },
           ]),
         },
@@ -298,17 +298,17 @@ export const TotalCostAreaChartOptionSample = () => {
         symbol: "none",
         sampling: "lttb",
         itemStyle: {
-          color: "rgb(0, 100, 0)",
+          color: "#5CDD8C",
         },
         areaStyle: {
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
             {
               offset: 0,
-              color: "rgb(0, 80, 0)",
+              color: "#365B49",
             },
             {
               offset: 1,
-              color: "rgb(200, 255, 200)",
+              color: "#5CDD8C",
             },
           ]),
         },
