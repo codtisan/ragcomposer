@@ -10,6 +10,7 @@ import {
   File,
   Key,
   LayoutDashboard,
+  LucideProps,
   MessageCircleCode,
   MessageSquare,
   MoveLeft,
@@ -30,9 +31,17 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { useState } from "react";
+import { ForwardRefExoticComponent, RefAttributes, useState } from "react";
 
-const firstPageItemList = [
+export type PageItem = {
+  title: string;
+  url: string;
+  icon: ForwardRefExoticComponent<
+    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
+  >;
+};
+
+const firstPageItemList: PageItem[] = [
   {
     title: "Dashboard",
     url: "/dashboard",
@@ -90,7 +99,7 @@ const firstPageItemList = [
   },
 ];
 
-const secondPageItemList = [
+const secondPageItemList: PageItem[] = [
   {
     title: "Log",
     url: "/log",
@@ -138,6 +147,23 @@ const secondPageItemList = [
   },
 ];
 
+const MenuItemList = (item: PageItem) => {
+  return (
+    <Tooltip key={item.title}>
+      <TooltipTrigger asChild>
+        <Button className="hover:bg-gray-100" variant="link">
+          <Link href={item.url}>
+            <item.icon />
+          </Link>
+        </Button>
+      </TooltipTrigger>
+      <TooltipContent side="right">
+        <p>{item.title}</p>
+      </TooltipContent>
+    </Tooltip>
+  );
+};
+
 export const AppSidebar = () => {
   const [page, setPage] = useState<"first" | "second">("first");
 
@@ -145,37 +171,11 @@ export const AppSidebar = () => {
     <div className="w-[3rem] h-[95vh] flex flex-col items-center border-r shadow-sm justify-between">
       <div className="flex flex-col items-center gap-2 mt-4">
         {page === "first"
-          ? firstPageItemList.map((item) => {
-              return (
-                <Tooltip key={item.title}>
-                  <TooltipTrigger asChild>
-                    <Button className="hover:bg-sky-100" variant="link">
-                      <Link href={item.url}>
-                        <item.icon />
-                      </Link>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent side="right">
-                    <p>{item.title}</p>
-                  </TooltipContent>
-                </Tooltip>
-              );
+          ? firstPageItemList.map((item: PageItem) => {
+              return MenuItemList(item);
             })
-          : secondPageItemList.map((item) => {
-              return (
-                <Tooltip key={item.title}>
-                  <TooltipTrigger asChild>
-                    <Button className="hover:bg-sky-100" variant="link">
-                      <Link href={item.url}>
-                        <item.icon />
-                      </Link>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent side="right">
-                    <p>{item.title}</p>
-                  </TooltipContent>
-                </Tooltip>
-              );
+          : secondPageItemList.map((item: PageItem) => {
+              return MenuItemList(item);
             })}
       </div>
       <Tooltip key="Next">
