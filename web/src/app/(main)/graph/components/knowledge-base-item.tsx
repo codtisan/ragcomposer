@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { KnowledgeBaseModel } from "@/models/knowledge-base";
 import { Dispatch, SetStateAction } from "react";
@@ -19,19 +18,20 @@ const KnowledgeBaseItem = ({
   setSelectedKnowledgeBase,
 }: KnowledgeBaseItemProps) => {
   return (
-    <Button
-      variant="ghost"
+    <div
       className={
         (cn("h-[20%] hover:bg-gray-200 flex items-center"),
-        selectedKnowledgeBase === item ? "bg-gray-200" : "")
+        selectedKnowledgeBase === item
+          ? "bg-gray-200 dark:bg-white dark:text-black"
+          : "")
       }
       onClick={() => setSelectedKnowledgeBase(item)}
     >
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-4 ml-6">
         <span>{item.name}</span>
         <span>{item.created_at}</span>
       </div>
-    </Button>
+    </div>
   );
 };
 
